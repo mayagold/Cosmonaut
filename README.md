@@ -17,7 +17,7 @@
 
 LINK TO LIVE SITE:
 
-https://mayagold.github.io/
+https://mayagold.github.io/Cosmonaut
 
 ---
 
