@@ -1,58 +1,52 @@
-Project 1
-WDI-remote Gizmo
-Maya Goldstein
-July 2017
+##### Maya Goldstein
+##### July 2017
 
+# Mr. Fun Guy's Wild Ride
 
-********************************************************
-********************************************************
+---
 
-"Mr. Fun Guy's Wild Ride"
-
-********************************************************
-********************************************************
+### Specs
 
 * Technologies Used: HTML, CSS, JavaScript, jQuery, Velocity.js
-* Hosted on github pages
 * Music:
   * "Cuckoo" - Tipper
   * "Raindrops on Roses" - An-ten-nae feat. Alice D
 * Background graphics: giphy
 
-
-********************************************************
-********************************************************
+---
 
 LINK TO LIVE SITE:
 
 https://mayagold.github.io/
 
-********************************************************
-********************************************************
+---
 
-Premise: Help a computer character, "Mr. Fun Guy,"  take a trip through outer space on his spaceship fueled by magic mushrooms. Click on the mushrooms to try to earn fuel points. Each round, they get more difficult to click on. When you make it through all seven rounds, you win the game and Mr. Fun Guy's spaceship takes off.
+### Premise
 
-********************************************************
-********************************************************
+Help a computer character, "Mr. Fun Guy,"  take a trip through outer space on his spaceship fueled by magic mushrooms. Click on the mushrooms to try to earn fuel points. Each round, they get more difficult to click on. When you make it through all seven rounds, you win the game and Mr. Fun Guy's spaceship takes off.
 
-Why did I choose to make this game: I wanted to play with CSS animations and jQuery animations. I felt fairly comfortable writing JS and jQuery code but less comfortable with CSS. My original idea was to make a game in which animated objects move across the page and you have to click on them to earn points. What could be more fun to click on than mushrooms bouncing around the page?
+---
 
-********************************************************
-********************************************************
+### This was my first-ever attempt to build a game using JavaScript.
 
-Breakdown:
+I wanted to play with CSS animations and jQuery animations. My original idea was to make a game in which animated objects move across the page and you have to click on them to earn points. Naturally, I chose mushrooms to be the animated objects.
+
+---
+
+### Breakdown
 
 ![Modal: Start Game](/screen_captures/pageload.png?raw=true)
 
 The page loads and displays a start modal. This modal contains the directions for the game, instructing the player to click on the mushrooms that appear on screen, and a start button.
 
 An event listener attached to the start button triggers audio.
-    The first song begins playing when you click the start button. ("Cuckoo" by Tipper)
-    An event listener attached to the first song starts the second song when the first song finishes playing. ("Raindrops on Roses feat. Alice D" by An-ten-nae)
+  * The first song begins playing when you click the start button. ("Cuckoo" by Tipper)
+  * An event listener attached to the first song starts the second song when the first song finishes playing. ("Raindrops on Roses feat. Alice D" by An-ten-nae)
 
 Clicking on the start button also hides the start modal, and displays the game space. A timer immediately begins counting down from 30 seconds and 10*(roundNumber) mushrooms appear on screen (10 mushrooms for round 1, 20 for round 2, etc.). They have different animations for each round.
 
 The mushrooms are randomly assigned a class of "normal", "poisonous," or "magic" using Math.random().
+
 The mushrooms are randomly assigned a top and left margin using Math.random() - this gives the illusion that they are "scattered" across the screen randomly.
 
 The mushrooms are given different animations for each round, using velocity.js.
@@ -67,11 +61,9 @@ Clicking on a normal one will not change the score. It will remove the normal mu
 
 Each mushroom can only be clicked on once. Then the event listener for that mushroom is turned off.
 
+---
 
-********************************************************
-********************************************************
-
-MOVING THROUGH EACH ROUND
+### Rounds
 
 At the end of each round, a modal will pop up.
 
@@ -82,242 +74,92 @@ If you have enough points to move on to the next round, a message will appear th
 The body background is reassigned for each new round to display a different gif.
 
 ![Modal: Repeat Round](/screen_captures/repeat_modal.png?raw=true)
-    If you don't have enough points, the modal will prompt you to repeat the round.
 
-********************************************************
-********************************************************
+If you don't have enough points, the modal will prompt you to repeat the round.
 
-ROUND BY ROUND BREAKDOWN
+---
 
-********************************************************
-********************************************************
-
-ROUND ONE
-
-![Round 1](/screen_captures/round1_capture.png?raw=true)
-
-No background layer showing.
-Timer starts at 30 seconds and immediately begins countdown.
-setUpRound function generates a number of mushrooms roundNumber*10, so 10 mushrooms.
-Mushrooms slowly grow in size.
-
-You have 30 seconds to play this round.
-In order to move on to the next round, your score must be 10+ at the end of the round.
-If your score is too low, this round will repeat again.
-if your score is below zero, you will lose the game.
-If your score is high enough, a modal will pop up to congratulate you. A new background will be triggered
-
-********************************************************
-********************************************************
-
-ROUND 2
-
-![Round 2](/screen_captures/round2_capture.png?raw=true)
-
-Starts with cat gif background.
-Timer starts at 30 seconds and immediately begins countdown.
-setUpRound function generates a number of mushrooms roundNumber*10, so 20 mushrooms.
-Mushrooms moving across the screen left to right using translate.
-
-You have 30 seconds to play this round.
-In order to move on to the next round, your score must be 15+ at the end of the round.
-If your score is too low, this round will repeat again.
-if your score is below zero, you will lose the game.
-If your score is high enough, a modal will pop up to congratulate you.
-
-********************************************************
-********************************************************
-
-ROUND 3
-
-![Round 3](/screen_captures/round3_capture.png?raw=true)
-
-Timer starts at 30 seconds and immediately begins countdown.
-setUpRound function generates a number of mushrooms roundNumber*10, so 30 mushrooms.
-Mushrooms moving across the screen diagonally.
-
-You have 30 seconds to play this round.
-In order to move on to the next round, your score must be 25+ at the end of the round.
-If your score is too low, this round will repeat again.
-if your score is below zero, you will lose the game.
-If your score is high enough, a modal will pop up to congratulate you.
-
-********************************************************
-********************************************************
-
-ROUND 4
-
-![Round 4](/screen_captures/round4_capture.png?raw=true)
-
-Timer starts at 30 seconds and immediately begins countdown.
-setUpRound function generates a number of mushrooms roundNumber*10, so 40 mushrooms.
-Mushrooms moving across the screen in a more complex pattern.
-
-You have 30 seconds to play this round.
-In order to move on to the next round, your score must be 35+ at the end of the round.
-If your score is too low, this round will repeat again.
-if your score is below zero, you will lose the game.
-If your score is high enough, a modal will pop up to congratulate you.
-
-
-********************************************************
-********************************************************
-
-ROUND 5
-
-![Round 5](/screen_captures/round5_capture.png?raw=true)
-
-Timer starts at 30 seconds and immediately begins countdown.
-setUpRound function generates a number of mushrooms roundNumber*10, so 50 mushrooms.
-Mushrooms moving across the screen in a more complex pattern.
-
-You have 30 seconds to play this round.
-In order to move on to the next round, your score must be 45+ at the end of the round.
-If your score is too low, this round will repeat again.
-if your score is below zero, you will lose the game.
-If your score is high enough, a modal will pop up to congratulate you.
-
-********************************************************
-********************************************************
-
-ROUND 6
-
-![Round 6](/screen_captures/round6_capture.png?raw=true)
-
-Timer starts at 30 seconds and immediately begins countdown.
-setUpRound function generates a number of mushrooms roundNumber*10, so 60 mushrooms.
-Mushrooms moving across the screen in a more complex pattern.
-
-You have 30 seconds to play this round.
-In order to move on to the next round, your score must be 55+ at the end of the round.
-If your score is too low, this round will repeat again.
-if your score is below zero, you will lose the game.
-If your score is high enough, a modal will pop up to congratulate you.
-
-
-********************************************************
-********************************************************
-
-ROUND 7
-
-![Round 7](/screen_captures/round7_capture.png?raw=true)
-
-Starts with all previously unlocked layers showing.
-Timer starts at 30 seconds and immediately begins countdown.
-setUpRound function generates a number of mushrooms roundNumber*10, so 70 mushrooms.
-Mushrooms moving across the screen in a more complex pattern.
-
-You have 30 seconds to play this round.
-In order to move on to the next round, your score must be 66+ at the end of the round.
-If your score is too low, this round will repeat again.
-if your score is below zero, you will lose the game.
-If your score is high enough, the win modal will pop up.
-
-*******************************************************
-*******************************************************
+### Win State
 
 ![Modal: You Win](/screen_captures/win_modal.png?raw=true)
 
-Win state: when all seven rounds have been completed and all colors are on the page.
-
-Modal pops up: you have fueled Mr. Fun Guy's spaceship and you are off to explore the universe.
+You win the game when all seven rounds have been completed and all colors are on the page.
 
 Button gives you the choice to play again.
 
-*******************************************************
-*******************************************************
+---
+
+### Lose State
 
 ![Modal: You Lose](/screen_captures/lose_modal.png?raw=true)
 
-Loss state: if your score falls below zero
+You lose the game if your score falls below zero
 
 You destroyed the spaceship's engine by trying to fuel it with poisonous mushrooms. Game over.
 
 Button gives you the choice to play again.
 
-*******************************************************
-*******************************************************
+---
+# Functionality
 
-Functions
+### Event Handlers
 
-********************************************************
-********************************************************
+**startGame();** - attached to start button - starts audio, sets up first round with score=5 and time=30, hides modals, displays the div containing the mushrooms
 
-EVENT HANDLERS
+**clickShrooms();** - attached to mushroom images - triggers different CSS animations for poisonous, magic and normal mushrooms
 
-********************************************************
-********************************************************
+**nextRound();** - attached to next-round-button - triggers setUpRound and hides the modal that contains it
 
-startGame() - attached to start button - starts audio, sets up first round with score=5 and time=30, hides modals, displays the div containing the mushrooms
+**repeatRound();** - attached to repeat-round-button - triggers setUpRound and hides the modal that contains it
 
-clickShrooms() - attached to mushroom images - triggers different CSS animations for poisonous, magic and normal mushrooms
+**restartGame();** - attached to start button - contained in modal that pops up when you lose the game - starts game over
 
-nextRound() - attached to next-round-button - triggers setUpRound and hides the modal that contains it
+**newGame();** - attached to start button - contained in modal that pops up when you win the game - starts game over
 
-repeatRound() - attached to repeat-round-button - triggers setUpRound and hides the modal that contains it
+---
 
-restartGame() - attached to start button - contained in modal that pops up when you lose the game - starts game over
+### Game Round Object
 
-newGame() - attached to start button - contained in modal that pops up when you win the game - starts game over
+Contains a property roundNumber that updates based on round number.
 
-********************************************************
-********************************************************
+**clearBoard();** method removes all mushrooms from their container div
 
-GAME ROUND OBJECT
+**generateShrooms(num);** method creates num shrooms and assigns them a random class and location on the page
 
-contains a property roundNumber that updates based on round number
+**setTimer();** sets the timer to count down from 30 seconds and calls **checkForWin();** when time===0
 
-clearBoard() method removes all mushrooms from their container div
+**roundRepeat();** calls the repeat round modal
 
-generateShrooms(num) method creates num shrooms and assigns them a random class and location on the page
+**roundNext();** calls the next round modal
 
-setTimer sets the timer to count down from 30 seconds and calls checkForWin() when time===0
+**roundAnimation(round);** assigns a different animation and body background based on the round number
 
-roundRepeat() calls the repeat round modal
+---
 
-roundNext() calls the next round modal
+**setUpRound();** calls the following functions:
 
-roundAnimation(round) assigns a different animation and body background based on the round number
+* round.clearBoard();
+* round.generateShrooms(round.roundNumber*10);
+* round.setTimer();
+* round.roundAnimation(round.roundNumber);
+* eventHandlers.clickShrooms();
 
-********************************************************
-********************************************************
+**checkForWin();** compares the score and the round number and determines whether the game will move on to the next round, or repeat the same round, or whether the user has won or lost the game
 
-setUpRound(); calls the following functions:
+---
 
-round.clearBoard();
-round.generateShrooms(round.roundNumber*10);
-round.setTimer();
-round.roundAnimation(round.roundNumber);
-eventHandlers.clickShrooms();
+### Approach
 
+1. Coded HTML
+2. Coded Functionality - made the game playable without any cool animation using JavaScript and jQuery. Make the modals work using CSS and event handlers
+3. Coded basic CSS. Added event listeners to mushrooms and CSS animations when you click them
+4. Updated the HTML and game premise as I went along and my idea developed
+5. Added features: Audio, velocity animations, and background gifs
 
-checkForWin(); compares the score and the round number and determines whether the game will move on to the next round, or repeat the same round, or whether the user has won or lost the game
+---
 
-********************************************************
-********************************************************
+### ONGOING GOALS
 
-Approach taken:
-
-1. Coded HTML.
-2. Coded Functionality - made the game playable without any cool animation using JavaScript and jQuery. Make the modals work using CSS and event handlers.
-3. Coded basic CSS. Added event listeners to mushrooms and CSS animations when you click them.
-4. Updated the HTML and game premise as I went along and my idea developed.
-5. Added features: Audio, velocity animations, and background gifs.
-
-********************************************************
-********************************************************
-
-UNSOLVED PROBLEMS
-
-Could not figure out a way to make velocity fadeOut work so that the mushrooms fade out when you click on them. Instead I changed tactics and they become opaque and unclickable.
-
-CSS: Styling the modals so that they appear centered on the page and the text stays within the div even when you resize.
-
-********************************************************
-********************************************************
-
-ONGOING GOALS
-
-* Media queries so you can play it on your phone
+* Media queries to improve cell phone usability
 * Improve CSS
-* Add audio playlist in HTML (rather than two songs using jQuery)
+* Add audio playlist in HTML
