@@ -1,0 +1,151 @@
+body {
+  font-family: "Comfortaa", cursive;
+  background: black;
+  animation-name: colorRotate;
+  animation-duration: 15s;
+  animation-iteration-count: 2;
+  color: rgba(255,255,255,.6);
+  width: 80%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.modal {
+  background: rgba(0,0,0,.7);
+  animation: colorRotate 9s linear infinite;
+  font-size: 2vw;
+  height: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  color: #6037DE;
+}
+
+@media only screen and (max-width: 800px) {
+  .modal {
+    font-size: 20px;
+  }
+}
+
+ul {
+  display: none;
+}
+
+.start-button {
+  font-family: Comfortaa, cursive;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: #00ffdf;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.go-button {
+  font-family: Comfortaa, cursive;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: #00ffdf;
+  padding: 20px;
+  margin: 60px auto;
+  display: block;
+}
+
+#modal-repeat {
+  display: none;
+  height: 600px;
+}
+
+#modal-next-round {
+  display: none;
+}
+
+#modal-win {
+  display: none;
+  background: rgba(0,0,0,0.2);
+}
+
+#modal-lose {
+  display: none;
+}
+
+.game-container {
+  display: none;
+  margin-top: 50px;
+}
+
+.mushroom-container {
+  display: none;
+  margin-top: -600px;
+}
+
+h2 {
+  font-family: Comfortaa, cursive;
+  text-align: left;
+  display: block;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+h3 {
+  font-family: 'Digital Dream Fat';
+  font-size: 200px;
+  marging-top: -140px;
+  text-align: center;
+  display: block;
+}
+
+.poisonous {
+  display: block;
+  position: absolute;
+
+}
+
+.normal {
+  display: block;
+  position: absolute;
+}
+
+.magic {
+  display: block;
+  position: absolute;
+
+}
+
+@keyframes colorRotate {
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: .5
+  }
+  100% {
+    transform:  rotate(1800deg);
+    filter: hue-rotate(720deg);
+    opacity: 0
+  }
+}
+
+@keyframes vibrate {
+  25% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: .5
+  }
+  75% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: scale(.5) translateY(6px);
+    filter: hue-rotate(360deg);
+    opacity: 0
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mr. Fun Guy's Wild Ride</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.js"></script>
+    <script type="text/javascript" src="app.js"> </script>
+  </head>
+  <body>
+    <div class="modal" id="modal-intro">
+      <p id="intro-text">You're off on a wild outer space adventure! Somewhere in the galaxy Andromeda, floating among trillions of stars, you happen to run into another friendly COSMONAUT.<br><br>The Cosmonaut waves at you from his spaceship. "Friendly traveler!" he cries. "My spaceship is out of fuel! Can you help me?"<br><br>You explain to the cosmonaut that you would love to help, but you only have enough fuel to complete your own mission and get safely home.<br/><br/>"No, no," he says. "Allow me to introduce myself. My name is Mr. Fun Guy. I am the captain of a spaceship that runs on a very different fuel: magical space mushrooms! And they are floating around us everywhere amongst the stars! But they are very hard to catch, and I can't leave my ship! Can you help me?"<br/><br/>Help Mr. Fun Guy fuel up by catching him some magic mushrooms. Click on them as they appear while you fly through space. If you find a magic mushroom, you'll earn a fuel point. When you earn enough points, you'll fill up his tank.
+      <br><br>"One more thing!" says Mr. Fun Guy. "NOT ALL OF THE MUSHROOMS ARE MAGIC! Some are even poisonous. Be careful with those! They'll destroy my spaceship's engine, and I won't be able to go anywhere."
+      </p>
+      <button class="start-button">Start Playing!</button>
+    </div>
+    <div class="container">
+      <div class="game-container">
+        <h2 id=show-power>Points: 5</h2>
+        <h3>30</h3>
+        <div class="mushroom-container"></div>
+      </div>
+    </div>
+    <div class="modal" id="modal-repeat">
+      <div id="modal-text-div"><p id="intro-text">Mr. Fun Guy says:<br><br>NOTHING'S HAPPENING...<br><br>WE NEED MORE FUEL...</p></div>
+      <div id="modal-button"><button class="go-button" id="repeat-button">Keep Playing!</button></div>
+    </div>
+    <div class="modal" id="modal-next-round">
+      <p id="intro-text">Mr. Fun Guy says:<br><br><br>WOAH !<br><br>DO YOU SEE THAT ?!?!??! </p>
+      <button class="go-button" id="next-button">Keep Playing!</button>
+    </div>
+    <div class="modal" id="modal-win">
+      <p id="intro-text"><br><br><br><br><br><br>Mr. Fun Guy says:<br><br>"BLAST OFF!!! Thank you for filling up my fuel tank!!! Now we're both free to explore the universe!!"<br/><br/>He points out across the galaxy and winks at you.<br/><br/>"I'm not gonna promise you'll meet any aliens, but...<br/>If you head that way..."<br></p>
+      <button class="start-button" id="new-game-button">New Game</button>
+    </div>
+    <div class="modal" id="modal-lose">
+      <p id="intro-text">OH NO!<br><br>YOU WEREN'T CAREFUL ENOUGH!<br><br>You've clicked on way too many poisonous mushrooms.<br>You broke Mr. Fun Guy's spaceship!<br><br>Now you're forever drifting through a colorless universe.</p>
+      <button class="start-button" id="restart-button">Start Over</button>
+    </div>
+  </body>
+</html>
