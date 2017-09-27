@@ -1,6 +1,10 @@
 body {
   font-family: "Comfortaa", cursive;
   background: black;
+  animation-name: colorRotate;
+  animation-duration: 15s;
+  animation-iteration-count: 2;
+  color: rgba(255,255,255,.6);
   width: 80%;
   max-height: 100%;
   margin: 0 auto;
@@ -14,7 +18,7 @@ body {
   margin: 0 auto;
   padding-top: 20px;
   text-align: center;
-  color: whitesmoke;
+  color: #6037DE;
 }
 
 @media only screen and (max-width: 800px) {
@@ -31,7 +35,7 @@ ul {
   font-family: Comfortaa, cursive;
   font-weight: bolder;
   font-size: 20px;
-  background-color: #6037DE;
+  background-color: #00ffdf;
   padding: 20px;
   margin: 0 auto;
 }
@@ -40,7 +44,7 @@ ul {
   font-family: Comfortaa, cursive;
   font-weight: bolder;
   font-size: 20px;
-  background-color: #6037DE;
+  background-color: #00ffdf;
   padding: 20px;
   margin: 60px auto;
   display: block;
